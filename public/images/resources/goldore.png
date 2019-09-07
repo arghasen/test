@@ -1,0 +1,715 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" ng-app="appLandia" ng-controller="ctrlMain as main">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    
+    <meta name="description" content="Sim Companies is a fun to play realistic economy simulation online game. You can build your business from ground up and meet new friends.">
+    <meta name="author" content="Patrik Beck">   
+    
+
+    <meta name="keywords" content="sim companies,online game,strategy game,play for free,free game,economy simulation game,business simulation game" />
+    <meta name="referrer" content="origin">
+
+    <meta property="og:url"           content="https://simcompanies.com/static/images/resources/goldore.png" />
+
+    
+
+    <meta property="og:type"          content="article" />
+    <meta property="og:title"         content="Business simulation game - Sim Companies" />
+    <meta property="og:description"   content="Sim Companies is a free online business simulation game. You can build your business from ground up and meet new friends." />
+    <meta property="og:image"         content="https://d1fxy698ilbz6u.cloudfront.net/static/images/social/facebook.e599f7c21997.png" />
+    <meta property="og:author"        content="https://www.facebook.com/SimCompanies">
+
+    
+
+    <meta name="twitter:url" content="https://simcompanies.com/static/images/resources/goldore.png"/>
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@SimCompanies">
+    <meta name="twitter:creator" content="@SimCompanies">
+    <meta name="twitter:title" content="Business simulation strategy game - Sim Companies">
+    <meta name="twitter:description" content="Sim Companies is a free online business simulation game. You can build your business from ground up and meet new friends.">
+    <meta name="twitter:image:src" content="https://d1fxy698ilbz6u.cloudfront.net/static/images/social/twitter_card.ede1b31a3793.png">
+
+    
+
+    <meta property="fb:admins" content="721894314" />
+
+    
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="https://d1fxy698ilbz6u.cloudfront.net/static/images/favico/apple-touch-icon-57x57.4890776126ad.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://d1fxy698ilbz6u.cloudfront.net/static/images/favico/apple-touch-icon-60x60.13c87aee43b2.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://d1fxy698ilbz6u.cloudfront.net/static/images/favico/apple-touch-icon-72x72.861291f2600c.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://d1fxy698ilbz6u.cloudfront.net/static/images/favico/apple-touch-icon-76x76.9ed7a2ef8568.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://d1fxy698ilbz6u.cloudfront.net/static/images/favico/apple-touch-icon-114x114.fedfcdfdc094.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://d1fxy698ilbz6u.cloudfront.net/static/images/favico/apple-touch-icon-120x120.fd7fed44df55.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://d1fxy698ilbz6u.cloudfront.net/static/images/favico/apple-touch-icon-144x144.724e9cbe6fe2.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://d1fxy698ilbz6u.cloudfront.net/static/images/favico/apple-touch-icon-152x152.e606938310e9.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://d1fxy698ilbz6u.cloudfront.net/static/images/favico/apple-touch-icon-180x180.c59e3ad21162.png">
+    <link rel="icon" type="image/png" href="https://d1fxy698ilbz6u.cloudfront.net/static/images/favico/favicon-32x32.624d6a1ea844.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://d1fxy698ilbz6u.cloudfront.net/static/images/favico/favicon-194x194.3f8c25e12c65.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="https://d1fxy698ilbz6u.cloudfront.net/static/images/favico/favicon-96x96.f321ef1c5228.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://d1fxy698ilbz6u.cloudfront.net/static/images/favico/android-chrome-192x192.64463a29d611.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="https://d1fxy698ilbz6u.cloudfront.net/static/images/favico/favicon-16x16.cc2845c91f93.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="https://d1fxy698ilbz6u.cloudfront.net/static/images/favico/safari-pinned-tab.e3d1799f069c.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="https://d1fxy698ilbz6u.cloudfront.net/static/images/favico/favicon.e6cec2f1f142.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="https://d1fxy698ilbz6u.cloudfront.net/static/images/favico/mstile-144x144.3c0d25911662.png">
+    <meta name="msapplication-config" content="https://d1fxy698ilbz6u.cloudfront.net/static/images/favico/browserconfig.ac3df50984ee.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- place this in a head section -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="https://d1fxy698ilbz6u.cloudfront.net/static/images/splash/apple_splash_1242.336add258e88.png" sizes="1242x2208" rel="apple-touch-startup-image" />
+    <link href="https://d1fxy698ilbz6u.cloudfront.net/static/images/splash/apple_splash_750.ad7d05640f1f.png" sizes="750x1334" rel="apple-touch-startup-image" />
+    <link href="https://d1fxy698ilbz6u.cloudfront.net/static/images/splash/apple_splash_640.6e21f2b934a2.png" sizes="640x1136" rel="apple-touch-startup-image" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
+    <title>Business simulation game - Sim Companies</title>
+    <!-- Bootstrap core CSS -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://d1fxy698ilbz6u.cloudfront.net/static/CACHE4/css/432320e79d5c.css" type="text/css" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+    
+
+    <script type="application/ld+json">
+	{
+	  "@context" : "http://schema.org",
+	  "@type" : "Organization",
+	  "name" : "Simcompanies",
+	  "url" : "https://simcompanies.com",
+	  "sameAs" : [
+	    "https://www.facebook.com/simcompanies",
+	    "https://twitter.com/simcompanies"
+	  ]
+        }
+    </script>
+
+    
+    <script type="text/javascript" src="https://d1fxy698ilbz6u.cloudfront.net/static/CACHE4/js/352d5bf03e9a.js"></script>
+
+    <script type="text/javascript">
+      // Initialize the service worker
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register("/serviceworker.js", {
+          scope: '/'
+        });
+      }
+    </script>
+
+    <script type="text/javascript">
+      (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
+      ;r.type="text/javascript";r.async=true
+      ;r.src="https://cdn.amplitude.com/libs/amplitude-4.5.2-min.gz.js"
+      ;r.onload=function(){if(e.amplitude.runQueuedFunctions){
+        e.amplitude.runQueuedFunctions()}else{
+        console.log("[Amplitude] Error: could not load SDK")}}
+      ;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
+      ;function s(e,t){e.prototype[t]=function(){
+        this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+        var o=function(){this._q=[];return this}
+        ;var a=["add","append","clearAll","prepend","set","setOnce","unset"]
+        ;for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[]
+          ;return this}
+        ;var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
+        ;for(var p=0;p<l.length;p++){s(c,l[p])}n.Revenue=c
+        ;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut",
+          "setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify",
+          "clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","logEventWithTimestamp",
+          "logEventWithGroups","setSessionId","resetSessionId"]
+        ;function v(e){function t(t){e[t]=function(){
+          e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
+          for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){
+          e=(!e||e.length===0?"$default_instance":e).toLowerCase()
+          ;if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]}
+        ;e.amplitude=n})(window,document);
+
+      amplitude.getInstance().init('a5727e4f9af6d8d768c9cfcbf0f98594');
+    </script>
+
+    
+    <!-- Reddit Conversion Pixel -->
+    <script>
+      !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','t2_2qxabi4k');rdt('track', 'PageVisit');
+    </script>
+    
+
+  </head>
+
+  <base href="/"/>
+
+  <body resize>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId            : '173671979718626',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v3.2'
+      });
+    };
+
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+
+  
+<script>
+  dataLayer = [
+    {
+      inTutorial: false,
+      tutorialFinished: false,      
+
+      
+        loggedIn: false
+      
+    }
+  ];
+
+  cfg = {
+    'csrf': 'eZVMVnEcHokhNTHOXdSpD4Qty1sX8SwA0pYhufGApL3lIJ8ttODrU3vPZaZx34Sd',
+  };
+  cfg.urls = {
+    'filterUpdate': '/api/v1/building_update_filter/',
+    'getMessages': '/api/messages/',
+    'getMessagesByCompany': '/api/messages_by_company/',
+    'facebookConnect': '/auth/facebook/connect/',
+    'facebookAuth': '/auth/facebook/auth/',
+    'facebookConnectRedirect': 'https://graph.facebook.com/v2.7/oauth/authorize?client_id=173671979718626&response_type=code&scope=email&redirect_uri=https%3A%2F%2Fwww.simcompanies.com%2Fauth%2Ffacebook%2Fconnect%2F',
+    'emailAuth': '/api/v2/auth/email/auth/',
+    'emailConnect': '/api/v2/auth/email/connect/',
+    'passwordReset': '/api/v2/auth/email/reset/',
+    'payment': '/payment/',
+    'marketTicker': '/api/v1/market-ticker/PLACEHOLDER/',
+    'apiExchange': '/api/v1/exchange/',
+    'buildingsNew': '/api/buildings/new',
+    'avatar': '/account/avatar/',
+    'update_note': '/api/update-note/',
+    'marketOrder':'/api/v2/market-order/',
+    'resource': '/api/resource/',
+    'spendResearch': '/api/research/spend/',
+    'getChatHistory': '/api/chatroom/',
+    'contest': '/api/contest/',
+    'bonds': '/api/bonds/',
+    'builidings': '/api/v1/buildings/',
+  };
+
+</script>
+
+
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NBD5DQ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NBD5DQ');</script>
+    <!-- End Google Tag Manager -->
+
+    
+    
+
+    
+
+    
+
+    <div id="reactjs-top-menu"></div>
+
+    <div class="floating-messages" ng-cloak>
+      <div ng-repeat="m in main.messages() track by $index">
+        <div class="alert alert-<[m[0]]> animate-appear" ng-click="main.closeMessage($index)">
+          <span ng-bind-html="m[1]"></span>
+          <span class="close" aria-hidden="true" ng-click="main.closeMessage($index)">&times;</span>
+        </div>
+      </div>
+      <div id="reactjs-messages"></div>
+    </div>
+
+    </nav>
+    
+
+    
+    
+
+    <div class="wrapper">
+      
+
+      <div class="container " style="position: relative; padding-top: 40px; padding-bottom: 30px;">
+
+        
+
+<div class="row">
+  <div class="col-lg-6 col-lg-offset-3">
+    <div class="well-ice well-error">
+      <div class="well-header text-uppercase">Something's wrong</div>
+
+      <h4 class="">
+        
+Oops, we can't find the page you requested.
+
+        <br/><br/>
+        <small>
+HTTP ERROR 404
+</small>
+      </h4>
+
+      <p>
+        <a class="btn btn-primary" href="/">Home</a>
+      </p>
+
+      <div class="bg-blur"></div>
+    </div>
+  </div>
+</div>
+
+
+
+      </div> <!-- /container -->
+
+      
+      <div class="push"></div>
+    </div>
+
+    <div class="footer-wrapper" id="reactjs-footer">
+
+      
+      <div class="background-image-wrapper">
+        <div class="background-image">
+          <img ng-src="https://d1fxy698ilbz6u.cloudfront.net/static/images/background.6d8e980611a6.png" alt="business simulation game"/>
+        </div>
+      </div>
+      
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4 col-xs-3">
+              <div class="navbar-header">
+                <a class="navbar-brand hidden-xs" href="/">
+                  <span>
+                    <img src="https://d1fxy698ilbz6u.cloudfront.net/static/images/logo_header.04b43c41cf5a.png" height="38" alt="Sim companies"/>
+                  </span>
+                </a>
+              </div>
+              <div class="social-plugins">
+              </div>
+            </div>
+            <div class="col-sm-8 col-xs-9 text-right">
+              <a class="terms" href="/about">About</a> |
+              <a class="terms" href="/report">Report a bug</a> |
+              <a class="terms" href="http://www.freepik.com/free-vector/set-of-four-modern-houses-in-isometric-style_1066452.htm" target="_blank">Freepik</a> |
+              <a class="terms" href="/articles/frequently-asked-questions">FAQ</a> |
+              <a class="terms" href="/privacy/" rel="nofollow">Privacy Policy</a> |
+              <a class="terms" href="/terms/" rel="nofollow">Terms and conditions</a>
+
+              <p class="hidden-xs">Copyright &copy; 2018 Sim Companies<span class="hidden-xs"> | Business simulation online game</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    
+
+    
+    
+
+    <script type="text/ng-template" id="searchPopup.html">
+      <a class="search-item">
+        <img ng-src="<[match.model.logo || ('https://d1fxy698ilbz6u.cloudfront.net/static/' + match.model.image)]>" height="20">
+        <span ng-bind-html="match.label | uibTypeaheadHighlight:query"></span><br/>
+
+        <small ng-if="match.model.type || match.model.former.length === 0">
+          <[match.model.type || 'Company']>
+        </small>
+        <small ng-if="!match.model.type && match.model.former.length > 0">
+          Former <i ng-bind-html="match.model.former | uibTypeaheadHighlight:query"></i>
+        </small>
+      </a>
+    </script>
+
+    <script>
+      window.searchBuildings = {};
+      window.searchResources = {};
+    </script>
+
+    <script>
+      window.reactjs = {
+        props: {
+          staticUrl: 'https://d1fxy698ilbz6u.cloudfront.net/static/',
+          contest: {},
+          sale: '',
+          contractHistoryMax: 500,
+          executivesTimeToLookForCandidateS: 60*60*10,
+          executivesTimeToSettleInS: 60*60*3,
+          executivesTimeToTrainS: 60*60*27,
+          executivesTrainingCost: 10000,
+          executivesExtraSlotCost: [50, 100, 200, 400],
+          executivesSeverancePackageDays: 3,
+          executivesTimeOnStrikeS: 60*60*24 + 60*10,
+          buildingsExtraSlotCost: [50, 100, 500],
+          buildingsWithDegradedProduction: ['M', 'O'],
+
+          bondsValue: 5000,
+          bondsCallInDays: 14,
+          armorgames: false,
+          facebookAppId: '173671979718626',
+          displayCaseSlotCost: 50,
+        },
+        messages: []
+      };
+
+    </script>
+
+
+    <script>
+      this.Urls=(function(){var Urls={};var self={url_patterns:{}};var _get_url=function(url_pattern){return function(){var _arguments,index,url,url_arg,url_args,_i,_len,_ref,_ref_list,match_ref,provided_keys,build_kwargs;_arguments=arguments;_ref_list=self.url_patterns[url_pattern];if(arguments.length==1&&typeof(arguments[0])=="object"){var provided_keys_list=Object.keys(arguments[0]);provided_keys={};for(_i=0;_i<provided_keys_list.length;_i++)
+provided_keys[provided_keys_list[_i]]=1;match_ref=function(ref)
+{var _i;if(ref[1].length!=provided_keys_list.length)
+return false;for(_i=0;_i<ref[1].length&&ref[1][_i]in provided_keys;_i++);return _i==ref[1].length;}
+build_kwargs=function(keys){return _arguments[0];}}else{match_ref=function(ref)
+{return ref[1].length==_arguments.length;}
+build_kwargs=function(keys){var kwargs={};for(var i=0;i<keys.length;i++){kwargs[keys[i]]=_arguments[i];}
+return kwargs;}}
+for(_i=0;_i<_ref_list.length&&!match_ref(_ref_list[_i]);_i++);if(_i==_ref_list.length)
+return null;_ref=_ref_list[_i];url=_ref[0],url_args=build_kwargs(_ref[1]);for(url_arg in url_args){var url_arg_value=url_args[url_arg];if(url_arg_value===undefined||url_arg_value===null){url_arg_value='';}else{url_arg_value=url_arg_value.toString();}
+url=url.replace("%("+url_arg+")s",url_arg_value);}
+return'/'+url;};};var name,pattern,url,url_patterns,_i,_len,_ref;url_patterns=[['about',[['about',[]]],],['account',[['company/%(company)s',['company',]]],],['account_delete',[['account/delete/',[]]],],['account_delete_confirm',[['account/delete/confirm/%(player_id)s/%(verification)s/',['player_id','verification',]]],],['account_give_boosts',[['account/give_boosts/%(player_id)s/',['player_id',]]],],['account_give_money',[['account/give_money/%(player_id)s/',['player_id',]]],],['account_launch_investigation',[['account/lauch\u002Dinvestigation/%(player_id)s/',['player_id',]]],],['account_notes',[['account/notes/',[]]],],['account_notifications',[['account/notifications/',[]]],],['account_password',[['account/password/',[]]],],['account_reset',[['account/reset/',[]]],],['achievements',[['achievements/',[]]],],['analytics',[['analytics/',[]]],],['api_bonds',[['api/bonds/',[]]],],['api_bonds_by_rating',[['api/bonds/rating/%(rating)s',['rating',]]],],['api_bonds_get',[['api/bonds/%(pk)s',['pk',]]],],['api_buildings_new',[['api/buildings/new',[]]],],['api_chatroom',[['api/chatroom/',[]]],],['api_contest',[['api/contest/',[]]],],['api_contract_get',[['api/v2/contracts/%(pk)s',['pk',]]],],['api_contract_history',[['api/v2/contracts\u002Dhistory/%(pk)s/',['pk',]]],],['api_contract_history_incoming',[['api/v2/contracts\u002Dhistory\u002Dincoming/',[]]],],['api_contract_history_outgoing',[['api/v2/contracts\u002Dhistory\u002Doutgoing/',[]]],],['api_contract_history_outgoing_get',[['api/v2/contracts\u002Dhistory\u002Doutgoing/%(pk)s/',['pk',]]],],['api_contract_incoming',[['api/v2/contracts\u002Dincoming/',[]]],],['api_contract_outgoing',[['api/v2/contracts\u002Doutgoing/',[]]],],['api_contract_outgoing_recent',[['api/v2/contracts\u002Doutgoing\u002Drecent/',[]]],],['api_course',[['api/courses/%(course_id)s/',['course_id',]]],],['api_course_history',[['api/courses/%(course_id)s/history/',['course_id',]]],],['api_course_invitations',[['api/courses/%(course_id)s/invitations/',['course_id',]]],],['api_course_invitations_get',[['api/courses/%(course_id)s/invitations/%(invitation_id)s',['course_id','invitation_id',]]],],['api_course_payment',[['api/courses/%(course_id)s/payment',['course_id',]]],],['api_course_students_get',[['api/courses/%(course_id)s/students/%(student_id)s',['course_id','student_id',]]],],['api_get_braintree_key',[['api/checkout/braintree\u002Dkey',[]]],],['api_market',[['api/market/%(kind)s',['kind',]]],],['api_messages',[['api/messages/',[]]],],['api_messages_by_company',[['api/messages_by_company/',[]]],],['api_pa_action',[['api/v2/pa\u002Daction/%(situation)s/%(choice)s/',['situation','choice',]]],],['api_resource',[['api/resource/',[]]],],['api_update_note',[['api/update\u002Dnote/',[]]],],['api_v1_building_update_filter',[['api/v1/building_update_filter/',[]]],],['api_v1_busy',[['api/v1/buildings/%(building_pk)s/busy/',['building_pk',]]],],['api_v1_company_list',[['api/v1/company/list/%(like)s/',['like',]]],],['api_v1_exchange',[['api/v1/exchange/',[]]],],['api_v1_market_ticker',[['api/v1/market\u002Dticker/%(since)s/',['since',]]],],['api_v1_rush',[['api/v1/rush/%(building_pk)s/',['building_pk',]]],],['api_v2_analytics_lifetime_value',[['api/v2/analytics/lifetime\u002Dvalue',[]]],],['api_v2_analytics_player_base',[['api/v2/analytics/player\u002Dbase',[]]],],['api_v2_analytics_player_dropout',[['api/v2/analytics/player\u002Ddropout',[]]],],['api_v2_analytics_player_registrations',[['api/v2/analytics/player\u002Dregistrations',[]]],],['api_v2_analytics_player_retention',[['api/v2/analytics/player\u002Dretention',[]]],],['api_v2_analytics_purchases_by_size',[['api/v2/analytics/purchases\u002Dby\u002Dsize',[]]],],['api_v2_analytics_recent_payments',[['api/v2/analytics/recent\u002Dpayments',[]]],],['api_v2_analytics_revenue_heartbeat',[['api/v2/analytics/revenue\u002Dheartbeat',[]]],],['api_v2_analytics_simboosts_reserve',[['api/v2/analytics/simboosts\u002Dreserve',[]]],],['api_v2_analytics_simboosts_spend',[['api/v2/analytics/simboosts\u002Dspend',[]]],],['api_v2_analytics_time_to_purchase',[['api/v2/analytics/time\u002Dto\u002Dpurchase',[]]],],['api_v2_armorgames_purchase',[['api/v2/armorgames/purchase',[]]],],['api_v2_article_get',[['api/v2/newspaper/%(newspaper_id)s/article/%(article_id)s',['newspaper_id','article_id',]]],],['api_v2_article_get_all',[['api/v2/newspaper/%(newspaper_id)s/article/',['newspaper_id',]]],],['api_v2_articles_by_author',[['api/v2/newspaper/articles\u002Dby\u002Dauthor/%(player_id)s/',['player_id',]]],],['api_v2_balance',[['api/v2/balance/',[]]],],['api_v2_balance_sheet',[['api/v2/players/%(player_id)s/balance\u002Dsheet/',['player_id',]]],],['api_v2_ban_identity',[['api/v2/players/%(player_id)s/ban\u002Didentity/',['player_id',]]],],['api_v2_ban_reasons_all',[['api/v2/encyclopedia/ban\u002Dreasons/',[]]],],['api_v2_bonus',[['api/v2/companies/me/bonus',[]]],],['api_v2_busy_take',[['api/v2/order/take/%(building_pk)s/',['building_pk',]]],],['api_v2_cases_get',[['api/v2/cases/%(case_id)s',['case_id',]]],],['api_v2_cases_judgements',[['api/v2/cases/%(case_id)s/judgements/',['case_id',]]],],['api_v2_cases_list',[['api/v2/cases/',[]]],],['api_v2_chatentry_pin',[['api/v2/chatentry/%(chat_entry_id)s/pin/',['chat_entry_id',]]],],['api_v2_chatrules',[['api/v2/chatroom/%(chatroom_id)s/show\u002Drules/',['chatroom_id',]]],],['api_v2_contacts',[['api/v2/contacts/',[]]],],['api_v2_contacts_get',[['api/v2/contacts/%(player_id)s',['player_id',]]],],['api_v2_encyclopedia_buildings',[['api/v2/encyclopedia/buildings/%(kind)s/',['kind',]]],],['api_v2_encyclopedia_levels_all',[['api/v2/encyclopedia/levels/',[]]],],['api_v2_encyclopedia_market_ticks',[['api/v2/encyclopedia/market\u002Dticks/',[]]],],['api_v2_encyclopedia_ranking',[['api/v2/encyclopedia/ranking/%(fr)s/%(to)s/',['fr','to',]]],],['api_v2_encyclopedia_ratings_all',[['api/v2/encyclopedia/ratings/',[]]],],['api_v2_encyclopedia_resources',[['api/v2/encyclopedia/resources/%(economy_state)s/%(kind)s/',['economy_state','kind',]]],],['api_v2_encyclopedia_resources_all',[['api/v2/encyclopedia/resources/',[]]],],['api_v2_encyclopedia_supporters_all',[['api/v2/encyclopedia/supporters/',[]]],],['api_v2_encyclopedia_trainings_all',[['api/v2/encyclopedia/trainings/',[]]],],['api_v2_executives_get',[['api/v2/executives/%(executive_id)s',['executive_id',]]],],['api_v2_executives_training_get',[['api/v2/executives/%(executive_id)s/trainings',['executive_id',]]],],['api_v2_government_orders',[['api/v2/government\u002Dorders/',[]]],],['api_v2_government_orders_bids',[['api/v2/government\u002Dorders/%(order_id)s/bids/',['order_id',]]],],['api_v2_government_orders_bids_get',[['api/v2/government\u002Dorders/%(order_id)s/bids/%(bid_id)s/',['order_id','bid_id',]]],],['api_v2_government_orders_get',[['api/v2/government\u002Dorders/%(order_id)s/',['order_id',]]],],['api_v2_judgements_all',[['api/v2/judgements\u002Dtypes/',[]]],],['api_v2_level_bonus',[['api/v2/no\u002Dcache/players/%(player_id)s/level\u002Dbonus/%(achievement_id)s/',['player_id','achievement_id',]]],],['api_v2_market_order',[['api/v2/market\u002Dorder/',[]]],],['api_v2_newspaper_get',[['api/v2/newspaper/%(newspaper_id)s/',['newspaper_id',]]],],['api_v2_newspaper_get_all',[['api/v2/newspaper/',[]]],],['api_v2_newspaper_sponsor_params',[['api/v2/newspaper/sponsor\u002Dparams',[]]],],['api_v2_notifications',[['api/v2/players/%(player_id)s/notifications/',['player_id',]]],],['api_v2_players',[['api/v2/players/%(player_id)s/',['player_id',]]],],['api_v2_players_achievements',[['api/v2/no\u002Dcache/players/%(player_id)s/achievements/',['player_id',]]],],['api_v2_players_achievements_get',[['api/v2/no\u002Dcache/players/%(player_id)s/achievements/%(achievement_id)s/',['player_id','achievement_id',]]],],['api_v2_players_achievements_overview',[['api/v2/players/%(player_id)s/achievements/',['player_id',]]],],['api_v2_players_administration_overhead',[['api/v2/players/me/administration\u002Doverhead/',[]]],],['api_v2_players_administration_overhead_plus_one',[['api/v2/players/me/administration\u002Doverhead/plus\u002Done',[]]],],['api_v2_players_ban',[['api/v2/players/%(player_id)s/ban/',['player_id',]]],],['api_v2_players_bonds_owned',[['api/v2/players/%(player_id)s/bonds/owned/',['player_id',]]],],['api_v2_players_bonds_sold',[['api/v2/players/%(player_id)s/bonds/sold/',['player_id',]]],],['api_v2_players_buildings',[['api/v2/players/%(player_id)s/buildings/',['player_id',]]],],['api_v2_players_buildings_abundance',[['api/v2/players/%(player_id)s/buildings/%(building_id)s/abundance',['player_id','building_id',]]],],['api_v2_players_buildings_get',[['api/v2/players/%(player_id)s/buildings/%(building_id)s/',['player_id','building_id',]]],],['api_v2_players_buildings_sales_orders',[['api/v2/players/%(player_id)s/buildings/%(building_id)s/sales\u002Dorders',['player_id','building_id',]]],],['api_v2_players_buildings_sales_orders_get',[['api/v2/players/%(player_id)s/buildings/%(building_id)s/sales\u002Dorders/%(order_id)s',['player_id','building_id','order_id',]]],],['api_v2_players_by_company',[['api/v2/players\u002Dby\u002Dcompany/%(company)s/',['company',]]],],['api_v2_players_display_case',[['api/v2/players/%(player_id)s/display\u002Dcase/',['player_id',]]],],['api_v2_players_display_case_get',[['api/v2/players/%(player_id)s/display\u002Dcase/%(item_id)s/',['player_id','item_id',]]],],['api_v2_players_executives',[['api/v2/players/%(player_id)s/executives/',['player_id',]]],],['api_v2_players_executives_position',[['api/v2/players/%(player_id)s/executives/%(position)s',['player_id','position',]]],],['api_v2_players_flag',[['api/v2/players/%(player_id)s/flag/',['player_id',]]],],['api_v2_players_free_text',[['api/v2/players/%(player_id)s/free\u002Dtext/',['player_id',]]],],['api_v2_players_ignore',[['api/v2/players/%(player_id)s/ignore/',['player_id',]]],],['api_v2_players_market_orders',[['api/v2/players/%(player_id)s/market\u002Dorders',['player_id',]]],],['api_v2_players_my_note',[['api/v2/players/%(player_id)s/my\u002Dnote/',['player_id',]]],],['api_v2_players_note',[['api/v2/players/%(player_id)s/note/%(about)s/',['player_id','about',]]],],['api_v2_players_note_list',[['api/v2/players/%(player_id)s/note/',['player_id',]]],],['api_v2_players_past_finances',[['api/v2/players/%(player_id)s/past\u002Dfinances/',['player_id',]]],],['api_v2_players_referrals',[['api/v2/players/%(player_id)s/referrals/',['player_id',]]],],['api_v2_players_resource_ability',[['api/v2/players/%(player_id)s/resource\u002Dability/%(resource_kind)s/',['player_id','resource_kind',]]],],['api_v2_resource_donate',[['api/v2/resources/%(resource_id)s/donate',['resource_id',]]],],['api_v2_resource_get',[['api/v2/resources/%(resource_id)s/',['resource_id',]]],],['api_v2_resource_transactions',[['api/v2/resources\u002Dtransactions/%(kind)s/%(last_id)s/',['kind','last_id',]]],],['api_v2_resources',[['api/v2/resources/',[]]],],['api_v2_spend_research',[['api/research/spend/',[]]],],['api_v2_sponsor_get',[['api/v2/newspaper/%(newspaper_id)s/sponsor/%(position)s',['newspaper_id','position',]]],],['api_v2_stats',[['api/v2/stats/top/%(category)s/',['category',]]],],['api_v2_unlock',[['api/v2/unlock/',[]]],],['article_aerospace',[['articles/aerospace',[]]],],['article_bigoil',[['articles/one\u002Dbeginners\u002Dexperience',[]]],],['article_bonds_guide',[['articles/bonds\u002Dguide',[]]],],['article_bonds_strategy',[['articles/bonds\u002Dstrategy\u002Dguide',[]]],],['article_changelog',[['articles/change\u002Dlog',[]]],],['article_economy',[['articles/sim\u002Dcompanies\u002Deconomy\u002Dmodel',[]]],],['article_electronics',[['articles/electronics',[]]],],['article_electronics2',[['articles/entering\u002Delectronics',[]]],],['article_executives_guide',[['articles/executives\u002Dguide',[]]],],['article_future_development',[['articles/future\u002Ddevelopment',[]]],],['article_government_orders_guide',[['articles/government\u002Dorders',[]]],],['article_guide',[['articles/guide',[]]],],['article_moderators',[['articles/moderators',[]]],],['article_pipeline',[['articles/pipeline',[]]],],['article_research_guide',[['articles/research\u002Dguide',[]]],],['article_simia',[['articles/simias\u002Dpointers',[]]],],['article_suggesting_features',[['articles/suggesting\u002Dfeatures',[]]],],['article_time_table',[['articles/time\u002Dtable',[]]],],['audit',[['account/audit/%(player_id)s',['player_id',]]],],['avatar',[['account/avatar/',[]]],],['building',[['b/%(pk)s/',['pk',]]],],['building_finish_up',[['admin/buildings/finish/%(building_id)s/',['building_id',]]],],['bust',[['500',[]]],],['checkout',[['checkout/',[]]],],['contest',[['contest/%(id)s',['id',]]],],['course',[['courses/%(course_id)s/',['course_id',]]],],['course_invite_accept',[['courses/accept\u002Dinvite/%(player_id)s/%(verification)s/%(course_id)s',['player_id','verification','course_id',]]],],['create',[['create/',[]]],],['csv_account_history',[['csv/account\u002Dhistory',[],],['csv/account\u002Dhistory\u002Dclass/%(player_id)s/',['player_id',]]],],['csv_course_history',[['csv/courses/%(course_id)s/history/',['course_id',]]],],['csv_resource_history',[['csv/resource\u002Dhistory',[]]],],['csv_resource_history_of_kind',[['csv/resource\u002Dhistory/%(kind)s',['kind',]]],],['detail',[['.well\u002Dknown/acme\u002Dchallenge/%(acme_data)s',['acme_data',]]],],['dups',[['dup\u002Dcases/',[]]],],['dups_case',[['dup\u002Dcases/%(case_id)s/',['case_id',]]],],['emailAuth',[['api/v2/auth/email/auth/',[]]],],['emailConnect',[['api/v2/auth/email/connect/',[]]],],['email_prompt',[['email\u002Dprompt/',[]]],],['encyklopedy',[['encyclopedia/resource/%(kind)s/',['kind',]]],],['encyklopedy_building',[['encyclopedia/building/%(kind)s/',['kind',]]],],['encyklopedy_levels',[['encyclopedia/levels/',[]]],],['encyklopedy_ratings',[['encyclopedia/ratings/',[]]],],['encyklopedy_supporters',[['encyclopedia/supporters/',[]]],],['end_tutorial',[['start_playing/',[]]],],['exchange',[['exchange/',[]]],],['facebookAuth',[['auth/armor\u002Dgames/%(user_id)s/%(auth_token)s/',['user_id','auth_token',],],['auth/facebook/auth/',[]]],],['facebookConnect',[['auth/facebook/connect/',[]]],],['faq',[['articles/frequently\u002Dasked\u002Dquestions',[]]],],['finances',[['finances/',[]]],],['followup',[['followup/%(followup_id)s',['followup_id',]]],],['for_schools',[['for\u002Dschools',[]]],],['fpa',[['fpa/',[]]],],['home',[['',[]]],],['inpersonate',[['admin/players/inpersonate/%(player_id)s/',['player_id',]]],],['landscape',[['landscape/',[]]],],['landscaping201710',[['articles/landscaping\u002D2017\u002D10',[]]],],['manifest',[['manifest.json',[]]],],['market',[['market/',[],],['market/resource/%(kind)s',['kind',]]],],['market\u002Dwater201709',[['articles/market\u002Dwater\u002DSep\u002D2017',[]]],],['market201607',[['articles/market\u002Dreport\u002DJuly\u002D2016',[]]],],['market201609',[['articles/market\u002Dreport\u002DAug\u002DSep\u002D2016',[]]],],['market_bonds',[['market/bonds/%(ratings)s',['ratings',]]],],['market_executives',[['market/executives/%(exec_type)s',['exec_type',]]],],['market_order',[['market\u002Dorder/%(resource_pk)s/',['resource_pk',]]],],['messages',[['messages/',[]]],],['messages_to',[['messages/%(company)s',['company',]]],],['newspaper',[['newspaper/',[]]],],['offline',[['offline',[]]],],['one_click_signin',[['signin/%(player_id)s/%(verification)s/',['player_id','verification',]]],],['pa_action',[['pa\u002Daction/%(situation)s/%(choice)s/',['situation','choice',]]],],['passwordReset',[['api/v2/auth/email/reset/',[]]],],['payment',[['payment/',[]]],],['privacy',[['privacy/',[]]],],['referral',[['ref/%(player_id)s/',['player_id',]]],],['referrals',[['referrals/',[]]],],['report',[['report',[]]],],['research',[['research/',[]]],],['screenshots',[['screenshots/',[]]],],['serviceworker',[['serviceworker.js',[]]],],['settings',[['account/settings/',[]]],],['signin',[['signin/',[]]],],['signout',[['signout/',[]]],],['signup',[['signup/',[]]],],['signup_completed',[['registered/',[]]],],['sitemap',[['sitemap.xml',[]]],],['start_tutorial',[['tutorial/',[]]],],['survey',[['exit\u002Dsurvey/%(choice)s',['choice',]]],],['terms',[['terms/',[]]],],['tutorial_finished',[['tutorial\u002Dfinished/',[]]],],['v2_market_order_cancel',[['api/v2/market\u002Dorder/%(order_pk)s/',['order_pk',]]],],['v2_market_take',[['api/v2/market\u002Dorder/take',[]]],],['version',[['version/',[]]],],['warehouse',[['warehouse/',[]]],],['warehouse_incoming',[['warehouse/incoming\u002Dcontracts',[]]],],['warehouse_outgoing',[['warehouse/outgoing\u002Dcontracts',[]]],],['warehouse_stats',[['warehouse/stats/',[]]]]];self.url_patterns={};for(_i=0,_len=url_patterns.length;_i<_len;_i++){_ref=url_patterns[_i],name=_ref[0],pattern=_ref[1];self.url_patterns[name]=pattern;url=_get_url(name);Urls[name]=url;Urls[name.replace(/-/g,'_')]=url;}
+return Urls;})();
+    </script>
+
+    <script type="text/javascript" src="https://d1fxy698ilbz6u.cloudfront.net/static/CACHE4/js/679799dff47b.js"></script>
+
+    <script type="text/javascript">
+
+      window.track = function(event, extra_options, callback) {
+        amplitude.getInstance().logEvent(event, extra_options);
+
+        if(typeof callback === 'function') callback();
+      };
+
+
+    </script>
+
+    <script type="text/javascript" src="https://d1fxy698ilbz6u.cloudfront.net/static/reactjs.297d73eace27.js" id="reactjs-script"></script>
+    <script>window.simCompaniesReactJSFileFetched || document.write('<script src="/static/reactjs.297d73eace27.js">\x3C/script>')</script>
+
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    
+    
+
+    <script type="text/javascript" src="https://d1fxy698ilbz6u.cloudfront.net/static/CACHE4/js/ab21d84ce107.js"></script>
+
+    <script type="text/javascript" src="https://d1fxy698ilbz6u.cloudfront.net/static/CACHE4/js/bcd416bf20ff.js"></script>
+
+    <script type="text/javascript" src="https://d1fxy698ilbz6u.cloudfront.net/static/CACHE4/js/c7d6940adb66.js"></script>
+
+    <script type="text/javascript" src="https://d1fxy698ilbz6u.cloudfront.net/static/CACHE4/js/9bd8e37e35b7.js"></script>
+
+    
+    <script>
+      angular.module('appLandia', ['timer', 'ngCookies', 'ngSanitize', 'yaru22.angular-timeago', 'ngAnimate', 'ui.bootstrap', 'ezfb', 'ngImgCrop', 'lr.upload', 'ng-drag-scroll', 'ngWebSocket'], function ($interpolateProvider) {
+        $interpolateProvider.startSymbol('<[');
+        $interpolateProvider.endSymbol(']>');});
+
+
+      var shortEnglishHumanizer = humanizeDuration.humanizer({
+        language: 'shortEn',
+        languages: {
+          shortEn: {
+            y: function() { return 'y' },
+            mo: function() { return 'mo' },
+            w: function() { return 'w' },
+            d: function() { return 'd' },
+            h: function() { return 'h' },
+            m: function() { return 'm' },
+            s: function() { return 's' },
+            ms: function() { return 'ms' },
+          }
+        }
+      });
+
+      window.unclaimedAchievements = [];
+
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+      fbq('init', '563584970408685');
+      fbq('track', "PageView");
+
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=563584970408685&ev=PageView&noscript=1"/></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    
+    <script type="text/javascript" src="https://d1fxy698ilbz6u.cloudfront.net/static/CACHE4/js/b88742add683.js"></script>
+
+    
+    
+    
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- TODO script src="../../assets/js/ie10-viewport-bug-workaround.js"></script -->
+
+    
+    <script>
+      window.humanizeNumber = function(num) {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      };
+
+      window.postToUrl = function (url, params) {
+        var form = document.createElement("form");
+        form.setAttribute("method", 'POST');
+        form.setAttribute("action", url);
+        var hiddenField = document.createElement("input");
+        hiddenField.setAttribute("type", "hidden");
+        hiddenField.setAttribute("name", "csrfmiddlewaretoken");
+        hiddenField.setAttribute("value", 'eZVMVnEcHokhNTHOXdSpD4Qty1sX8SwA0pYhufGApL3lIJ8ttODrU3vPZaZx34Sd');
+        form.appendChild(hiddenField);
+
+        for (var key in params) {
+          var hiddenField = document.createElement("input");
+          hiddenField.setAttribute("type", "hidden");
+          hiddenField.setAttribute("name", key);
+          hiddenField.setAttribute("value", params[key]);
+
+          form.appendChild(hiddenField);
+        }
+
+        document.body.appendChild(form);
+        form.submit();
+      };
+
+      $('.js-countdown').each(function(i, e) {
+        var elem = $(e);
+
+        elem.countdown(elem.attr('data-time'), function(event) {
+          $(this).text(event.strftime('%H:%M:%S'));
+        }).on('finish.countdown', function() {
+          elem.parents('.construction').removeClass('construction')
+          elem.parents('.panel-building').find('.js-ready').removeClass('hidden');
+          elem.parents('.panel-building').find('.js-busy').addClass('hidden');
+        });
+      });
+
+      window.dialogModal = function(options) {
+        var modal = $('.js-dialog-modal');
+
+        var settings = $.extend({
+          title: "Confirm",
+          question: "Are you sure?",
+          cancel: "Cancel",
+          cancel_glyph: "fa-remove",
+          cancel_class: "btn-default",
+          proceed: "Confirm",
+          proceed_glyph: "fa-check",
+          proceed_class: "btn-primary",
+          action: function() { modal.modal('hide'); },
+        }, options);
+
+        modal.find('.js-dialog-modal-title').html(settings.title);
+        modal.find('.js-dialog-modal-question').html(settings.question);
+
+        modal.find('.js-dialog-modal-cancel b').html(settings.cancel);
+        modal.find('.js-dialog-modal-cancel i').attr('class', '');
+        modal.find('.js-dialog-modal-cancel i').addClass("fa " + settings.cancel_glyph);        
+        modal.find('.js-dialog-modal-confirm b').html(settings.proceed);
+        modal.find('.js-dialog-modal-confirm i').attr('class', '');
+        modal.find('.js-dialog-modal-confirm i').addClass("fa " + settings.proceed_glyph);
+
+        var b_cancel = modal.find('.js-dialog-modal-cancel');
+        b_cancel.attr('class', '');
+        b_cancel.addClass("js-dialog-modal-cancel btn " + settings.cancel_class);
+
+        var b_proceed = modal.find('.js-dialog-modal-confirm');
+
+        b_proceed.attr('class', '');
+        b_proceed.addClass("js-dialog-modal-confirm btn " + settings.proceed_class);
+
+        window.dialogModalAction = function() {
+          settings.action();
+          modal.modal('hide');
+        };
+
+        modal.modal('show');        
+      };
+
+
+    </script>
+
+
+    <script>
+
+      window.getFloatSafely = function(n) {
+        if(n == "" || typeof n == 'undefined' || isNaN(n) || n == null) return 0;
+        return parseFloat(n);
+      };
+
+      window.displayShortNumber = function(q, def) {
+          if(q == "" || typeof q == 'undefined' || isNaN(q) || q == null) return def;
+
+          var amount = parseInt(Math.ceil(q));
+
+          if(amount < 0) return def;
+
+          if(amount > 1000000) return Math.floor(amount/100000)/10 + "M";
+          if(amount > 100) return Math.floor(amount/100)/10 + "k";
+          return amount;
+        };
+
+      var tuneIceWells = function() {
+        var footer_top = $('div.footer').offset().top;
+        var bg_image_width = 1600;
+
+        $('.well-ice').each(function(i, e) {
+          var well = $(e);
+
+          var well_to_bottom = footer_top - (well.offset().top + well.height() + parseInt(well.css("padding-bottom")) + parseInt(well.css("padding-top")));
+          var left_to_well = well.offset().left;
+
+          well.find("div.bg-blur").css({
+            bottom: (-1*well_to_bottom - 50) + "px",
+            left: (($(document).width() - bg_image_width)/2 - left_to_well - 1) + "px",
+          });
+
+        });
+
+        $('.tune-ice').each(function(i, e) {
+          var well = $(e);
+
+          var well_to_bottom = footer_top - (well.offset().top + well.height() + parseInt(well.css("padding-bottom")) + parseInt(well.css("padding-top")));
+          var left_to_well = well.offset().left;
+
+          well.find("div.bg-blur").css({
+            bottom: (-1*well_to_bottom - 50) + "px",
+            left: (($(document).width() - bg_image_width)/2 - left_to_well - 1) + "px",
+          });
+
+        });
+      };
+
+      $(function() {
+        tuneIceWells();
+        $('.well-ice div.bg-blur').css({
+          backgroundImage: 'url(https://d1fxy698ilbz6u.cloudfront.net/static/images/background-white.b6a69e7cba04.png)',
+          backgroundPosition: '0px bottom',
+        });
+      });
+
+      $('.js-form-post').click(function(e) {
+        var a = $(this);
+        a.parents('form').submit();
+      });
+
+      $('.js-help2').html($('.js-help').html());
+
+    </script>
+
+    
+
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));
+
+/*
+twttr.ready(
+  function(twttr) {
+    twttr.events.bind(
+      'follow',
+      function (event) {
+        $.ajax({type: "POST",
+          url: cfg.urls.twitterFollow,
+          data: {csrfmiddlewaretoken: cfg.csrf}
+        });
+      }
+    );
+  }
+);
+*/
+
+$('.js-twitter-follow').attr('href', 'https://twitter.com/intent/follow?original_referer=' + encodeURIComponent(window.location.origin) + '&ref_src=twsrc%5Etfw&region=follow_link&screen_name=SimCompanies&tw_p=followbutton');
+
+$('.js-facebook-follow').attr('href', 'https://www.facebook.com/plugins/like.php?action=like&app_id=173671979718626&channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FP5DLcu0KGJB.js%3Fversion%3D42%23cb%3Df290c7ebb8%26domain%3D' + window.location.hostname + '%26origin%3D' + encodeURIComponent(encodeURIComponent(window.location.origin)) + '%252Ff37c912bd%26relation%3Dparent.parent&container_width=0&href=https%3A%2F%2Fwww.facebook.com%2FSimCompanies%2F&layout=button&locale=en_US&ref=footer-%2Fachievements%2F&sdk=joey&share=false&show_faces=false&ret=optin&act=connect&hash=AQCiqUsSTFbiUVQH');
+
+    </script>
+
+
+
+    <script type="text/ng-template" id="messageModal.html">
+      <div class="modal-header">
+        <button type="button" class="close" ng-click="$ctrl.cancel()"><span aria-hidden="true">&times;</span></button>
+          <[title]>
+      </div>
+      <div class="modal-body">
+
+        <p class="mt20" ng-bind-html="message"></p>
+
+        <div class="text-center mt50">
+          <a ng-click="$ctrl.ok()" class="btn btn-default" href="javascript:void(0);">OK</a>
+        </div>
+
+      </div>
+    </script>
+
+  </body>
+
+</html>
+
