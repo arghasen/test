@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "watch": "nodemon .  --ext js,html",
+    "watch": "nodemon ./bin/www -V --ext js,html",
     "start": "node ./bin/www"
   },
   "dependencies": {
@@ -22,5 +22,13 @@
   "main": "app.js",
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arghasen/test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arghasen/test/issues"
+  },
+  "homepage": "https://github.com/arghasen/test#readme",
   "description": ""
 }

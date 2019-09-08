@@ -11,7 +11,7 @@
             <p class="card-text">{{data[0]}}</p>
             <p class="card-text">{{data[1]}}</p>
             <p class="card-text">{{data[2]}}</p>
-            {%if vaultstatus == 0%}
+            {%if vaultStatus == 0%}
             <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Unlock Vault</a>
             {%else%}
             <form action="/locked" method="GET">

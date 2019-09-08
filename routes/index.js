@@ -15,11 +15,13 @@ router.get('/', function(req, res, next) {
   // request('https://www.simcompanies.com/api/v1/market-ticker/2019-08-06T03:02:00.000Z/', { json: true }, (err, resp, body) => {
   // if (err) { return console.log(err); }
   // console.log(body)
+  console.log(vaultStatus)
+  var sendingData
   if(vaultStatus==1)
-    data=data
+    sendingData=data
   else
-    data=encryptedData
-  res.render('index', {  data:data });
+    sendingData=encryptedData
+  res.render('index', {  data:sendingData, vaultStatus:vaultStatus });
   // });
 });
 
