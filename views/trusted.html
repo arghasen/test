@@ -8,7 +8,13 @@
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Juan's Vault</h5>
-            <a href="#" class="btn btn-primary">Unlock Vault</a>
+            {%if status == 1%}
+            success
+            {%endif%}
+            <form action="/trustedOpen">
+                Key: <input type="text" name="usrname"><br>
+                <input type="submit" value="Submit">
+              </form>
         </div>
     </div>
 </div>
