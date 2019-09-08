@@ -9,13 +9,20 @@ var vaultStatus=0
 var JuanKey = "abc123"
 var trustedKeys =["alex","ivy", "ben"]
 var trustedParties=[0,0,0]
+var thePercent = 0
 /* GET home page. */
 router.get('/', function(req, res, next) {
   // request('https://www.simcompanies.com/api/v1/market-ticker/2019-08-06T03:02:00.000Z/', { json: true }, (err, resp, body) => {
   // if (err) { return console.log(err); }
   // console.log(body)
-  if(trustedParties[0]+trustedParties[1]+trustedParties[2]==2)
-    vaultStatus = 1
+  var cou =trustedParties[0]+trustedParties[1]+trustedParties[2]
+  if (cou ==1)
+   thePercent=50
+  if(cou==2)
+  {
+      vaultStatus = 1
+      thePercent=100
+  }
 
   console.log(vaultStatus)
 
@@ -25,7 +32,7 @@ router.get('/', function(req, res, next) {
   else
     sendingData=encryptedData
  
-  res.render('index', {  data:sendingData, vaultStatus:vaultStatus,trustedParties:trustedParties});
+  res.render('index', {  data:sendingData, vaultStatus:vaultStatus,trustedParties:trustedParties, thePercent:thePercent});
   // });
 });
 
@@ -50,6 +57,7 @@ router.get('/locked', function(req, res, next) {
   // console.log(body)
   vaultStatus = 0
   trustedParties=[0,0,0]
+  thePercent = 0
   res.redirect('/')
   // });
 });

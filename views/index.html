@@ -6,8 +6,9 @@
 {% block content %}
 <div class="container-fluid">
     <div class="card">
-        <div class="card-header">
+        <div class="card-header bg-warning">
             My Vault
+            
         </div>
         {% if vaultStatus == 0%}
         <div class="card-body bg-info ">
@@ -67,6 +68,9 @@
     <div class="card ">
         <div class="card-body">
             <h5 class="card-title">Juan's Trusted Parties</h5>
+            <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: {{thePercent}}%;" aria-valuenow="{{thePercent}}" aria-valuemin="0" aria-valuemax="100">{{thePercent}}%</div>
+                  </div>
             <table class="table table-striped">
                 <thead>
                     <tr>
